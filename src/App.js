@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { Box, Stack } from '@mui/material';
+import react from 'react';
+import Home from './components/home/home';
+import ResponsiveAppBar from './components/navbar/ResponsiveAppBar';
+import About from './components/about/About';
+import './app.css';
+const App = () => {
+	return (
+		<>
+		<Box sx={{backgroundColor:'#f5f5f5'}} >
+			<ResponsiveAppBar/>
+			<Home/>
+		</Box>
+		<Box>
+			<About/>
+		</Box>
+		</>	
+		);
+};
 
 export default App;
